@@ -3,13 +3,15 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
-import {Button} from 'element-ui'
+import {Button, Input, Icon} from 'element-ui'
 import store from './store'
 
 import 'element-ui/lib/theme-chalk/index.css'
 import 'normalize.css'
 
 Vue.use(Button)
+Vue.use(Input)
+Vue.use(Icon)
 
 Vue.config.productionTip = false
 
