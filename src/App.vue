@@ -28,6 +28,7 @@ export default {
 
       #app {
         height: 100%;
+        font-family: 'Microsoft JhengHei Light', Arial, Helvetica, sans-serif;
       }
     }
   }

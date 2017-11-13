@@ -3,10 +3,10 @@ const state = {
     blogName: 'Emi\'s Life',
     authorName: 'emiwang',
     pageList: [
-      {pageName: 'New story', pageId: '0', icon: '\ue6b7'},
-      {pageName: 'Stories', pageId: '1', icon: '\ue61b'},
-      {pageName: 'Profile', pageId: '2', icon: '\ue642'},
-      {pageName: 'Design', pageId: '3', icon: '\ue65c'}
+      {pageName: 'New story', pageId: 'newStory', icon: '\ue6b7'},
+      {pageName: 'Stories', pageId: 'stories', icon: '\ue61b'},
+      {pageName: 'Profile', pageId: 'profile', icon: '\ue642'},
+      {pageName: 'Design', pageId: 'design', icon: '\ue65c'}
     ],
     footer: 'View site',
     blogUrl: 'https://www.baidu.com/'

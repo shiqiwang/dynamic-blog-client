@@ -11,10 +11,11 @@
             <div class="search-box">
                 <el-input suffix-icon="el-icon-search" size="small"></el-input>
             </div>
-            <div class="page-option">
+            <div class="page-option" @click="changeSelectPage($event)">
                 <div v-for="(item, index) in sidebar.pageList"
                      :key="item.pageId"
                      class="page"
+                     :class="{active: item.pageId === selectPageId ? true : false}"
                 ><span>{{item.icon}}</span>{{item.pageName}}</div>
             </div>
             <div class="footer">
@@ -30,6 +31,17 @@ export default {
   computed: {
     sidebar () {
       return this.$store.getters.sidebar
+    },
+    selectPageId () {
+      return this.$store.getters.selectPageId
+    }
+  },
+  methods: {
+    changeSelectPage (event) {
+      let target = event.target
+      if (target.hasAttribute('data-page-id')) {
+        this.$store.dispatch('changeSelectPage', target.getAttribute('data-page-id'))
+      }
     }
   }
 }
