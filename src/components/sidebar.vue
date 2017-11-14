@@ -31,7 +31,7 @@
 export default {
   data () {
     return {
-      isOpen: ''
+      isOpen: 1
     }
   },
   computed: {
@@ -44,6 +44,9 @@ export default {
   },
   methods: {
     changeSelectPage (pageId, index) {
+      if (this.isOpen === index) {
+        return
+      }
       this.isOpen = index
       this.$store.dispatch('changeSelectPage', pageId)
     }
