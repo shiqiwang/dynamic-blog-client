@@ -11,11 +11,12 @@
             <div class="search-box">
                 <el-input suffix-icon="el-icon-search" size="small"></el-input>
             </div>
-            <div class="page-option" @click="changeSelectPage($event)">
+            <div class="page-option">
                 <div v-for="(item, index) in sidebar.pageList"
                      :key="item.pageId"
                      class="page"
-                     :class="{active: item.pageId === selectPageId ? true : false}"
+                     :class="{active: isOpen === index ? true : false}"
+                     @click="changeSelectPage(item.pageId, index)"
                 ><span>{{item.icon}}</span>{{item.pageName}}</div>
             </div>
             <div class="footer">
@@ -28,6 +29,11 @@
 
 <script>
 export default {
+  data () {
+    return {
+      isOpen: ''
+    }
+  },
   computed: {
     sidebar () {
       return this.$store.getters.sidebar
@@ -37,11 +43,9 @@ export default {
     }
   },
   methods: {
-    changeSelectPage (event) {
-      let target = event.target
-      if (target.hasAttribute('data-page-id')) {
-        this.$store.dispatch('changeSelectPage', target.getAttribute('data-page-id'))
-      }
+    changeSelectPage (pageId, index) {
+      this.isOpen = index
+      this.$store.dispatch('changeSelectPage', pageId)
     }
   }
 }
@@ -115,6 +119,10 @@ export default {
 
             .page:hover {
                 cursor: pointer;
+                background-color: rgb(217, 237, 250);
+            }
+
+            .active {
                 background-color: rgb(217, 237, 250);
             }
         }
