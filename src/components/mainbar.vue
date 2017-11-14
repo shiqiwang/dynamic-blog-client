@@ -1,14 +1,13 @@
 <template>
   <div class="mainbar">
       <div>
-          
       </div>
   </div>
 </template>
 
 <script>
 export default {
-  
+
 }
 </script>
 

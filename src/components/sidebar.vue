@@ -58,9 +58,6 @@ export default {
     .sidebar {
         width: 280px;
         background-color: rgb(244, 248, 251);
-        height: 100%;
-        position: absolute;
-        left: 0;
         .header {
             height: 40px;
             position: relative;
