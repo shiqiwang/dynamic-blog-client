@@ -1,13 +1,15 @@
 <template>
   <div class="mainbar">
-    <div>
-    </div>
+    <stories></stories>
   </div>
 </template>
 
 <script>
+import stories from './stories.vue'
 export default {
-
+  components: {
+    stories
+  }
 }
 </script>
 
