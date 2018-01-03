@@ -26,29 +26,29 @@
 
 <script>
   export default {
-    data() {
+    data () {
       return {
         isOpen: 1
-      };
+      }
     },
     computed: {
-      sidebar() {
-        return this.$store.getters.sidebar;
+      sidebar () {
+        return this.$store.getters.sidebar
       },
-      selectPageId() {
-        return this.$store.getters.selectPageId;
+      selectPageId () {
+        return this.$store.getters.selectPageId
       }
     },
     methods: {
-      changeSelectPage(pageId, index) {
+      changeSelectPage (pageId, index) {
         if (this.isOpen === index) {
-          return;
+          return
         }
-        this.isOpen = index;
-        this.$store.dispatch("changeSelectPage", pageId);
+        this.isOpen = index
+        this.$store.dispatch('changeSelectPage', pageId)
       }
     }
-  };
+  }
 </script>
 
 <style scoped lang="less">
