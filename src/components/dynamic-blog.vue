@@ -1,7 +1,7 @@
 <template>
   <div id="dynamic-blog">
     <sidebar class="sidebar"></sidebar>
-    
+    <mainbar class=""></mainbar>
   </div>
 </template>
 
